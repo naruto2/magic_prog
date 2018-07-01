@@ -11,5 +11,5 @@ int main()
   }
 
   for(unsigned int i=0; i<music.size(); i++)
-    jukebox(music[i]);
+    Pumplupinpull("歌をください",music[i]);
 }

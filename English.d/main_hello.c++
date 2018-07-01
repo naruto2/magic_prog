@@ -1,27 +1,22 @@
 #include "../include/magic_prog.h"
 
-void hello()
+void hello(string lang)
 {
+  Pumplupinpull("言語設定",lang);
   string str = "こんにちは";
-  cout << je(str);
-  pron(str);
+  cout << Pumplupinpull("翻訳して",str);
+  Pumplupinpull("話して",str);
 }
   
 
 int main()
 {
-  setlang("英語");
-  hello();
-  setlang("中国語");
-  hello();
-  setlang("ロシア語");
-  hello();
-  setlang("フランス語");
-  hello();
-  setlang("ドイツ語");
-  hello();
-  setlang("日本語");
-  hello();
+  hello("英語");
+  hello("中国語");
+  hello("ロシア語");
+  hello("フランス語");
+  hello("ドイツ語");
+  hello("日本語");
 
   return 0;
 }

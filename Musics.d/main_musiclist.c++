@@ -24,5 +24,5 @@ int main()
   
   cin >> i;
 
-  jukebox(music[i-1]);
+  Pumplupinpull("歌をください",music[i-1]);
 }

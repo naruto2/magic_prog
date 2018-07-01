@@ -1,16 +1,13 @@
 #include "../include/magic_prog.h"
 
-using namespace std;
-
-
 int main()
 {
-  watch_start();
+  Pumplupinpull("時間計測スタート");
 
   // 計測したい処理
   getchar();
   
-  printf("%.3f\n",watch_stop());
+  cout<<Pumplupinpull("時間計測ストップ")<<"秒"<<endl;
 
   return 0;
 }

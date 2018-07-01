@@ -1,6 +1,8 @@
 #ifndef MAGIC_PROG_H
 #define MAGIC_PROG_H
 #include <iostream>
+#include <sstream>
+#include <algorithm>
 #include <cstdio>
 #include <string>
 #include <vector>
@@ -18,4 +20,6 @@ void   watch_start();               //ストップウォッチスタート
 double watch_stop();                //ストップウォッチ時間計測
 string zeller(int y, int m, int d); //年月日より曜日を割り出す
 double usdjpy();                    //1ドル何円かを得る
+
+#include "../include/featherstar.h"
 #endif

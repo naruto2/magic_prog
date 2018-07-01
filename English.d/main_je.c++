@@ -2,12 +2,12 @@
 
 int main()
 {
-  setlang("英語");
+  Pumplupinpull("言語設定","英語");
   for(string j;;) {
     cin >> j;
     if ( !cin ) break;
-    cout << je(j);
-    pron(j);
+    cout << Pumplupinpull("翻訳して",j);
+    Pumplupinpull("話して",j);
   }
   return 0;
 }

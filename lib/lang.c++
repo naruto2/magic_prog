@@ -94,6 +94,7 @@ void setlang(string name)
   langmap["ノルウェー語"] = "no";
   langmap["ペルシャ語"] = "fa";
   langmap["ポルトガル語"] = "pt";
+  langmap["ポーランド語"] = "pl";
   langmap["ロマ語"] = "ro";
   langmap["ロシア語"] = "ru";
   langmap["サモア語"] = "sm";
