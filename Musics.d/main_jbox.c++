@@ -2,14 +2,8 @@
 
 int main()
 {
-  vector<string> music;  
-  
-  for (string str;;) {
-    cin >> str;
-    if ( !cin ) break;
-    music.push_back(str);
-  }
-
-  for(unsigned int i=0; i<music.size(); i++)
-    Pumplupinpull("歌をください",music[i]);
+  string str;
+  cin >> str;
+  Pumplupinpull("歌をください",str);
+  return 0;
 }

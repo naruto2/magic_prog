@@ -1,5 +1,5 @@
 LIBNAME = libmagic.a
-SRCS = je.c++  jukebox.c++  lang.c++  stop_watch.c++  usdjpy.c++  zeller.c++ Pumplupinpull.c++
+SRCS = je.c++  jukebox.c++  lang.c++  stop_watch.c++  usdjpy.c++  zeller.c++ Pumplupinpull.c++ jukeboxs.c++
 #for GNU make
 #SRCS = $(shell find . -name '*.c')
 OBJS = $(SRCS:.c++=.o)

@@ -20,7 +20,7 @@ string Pumplupinpull(string spell)
 string Pumplupinpull(string spell, string arg)
 {
   if ( spell == "歌をください" ) {
-    jukebox(arg);
+    jukeboxs(arg);
     return "";
   }
   if ( spell == "翻訳して" ) {
