@@ -3,7 +3,7 @@
 int main()
 {
   string str;
-  cin >> str;
+  getline(cin,str);
   Pumplupinpull("歌をください",str);
   return 0;
 }
