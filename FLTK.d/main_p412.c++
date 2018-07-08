@@ -55,9 +55,19 @@ int main()
   win.attach(t);
   
 
-  Image ii {Point{100,50},"image.jpg"};
+  Image ii {Point{200,250},"image.jpg"};
+
   win.attach(ii);
 
+  Circle c {Point{100,200},50};
+  Ellipse e {Point{100,200},75,25};
+  e.set_color(Color::dark_red);
+  Mark m {Point{1000,200},'x'};
+  win.attach(c);
+  win.attach(m);
+  win.attach(e);
+
+  
   
   win.wait_for_button();
   return 1;

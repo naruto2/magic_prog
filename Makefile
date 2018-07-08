@@ -1,4 +1,4 @@
-CPPFLAGS = -Iinclude -Llib -lmagic -Wall
+CPPFLAGS = -Iinclude -Llib -lmagic -Wall -g
 CPP := c++
 
 all: ;
