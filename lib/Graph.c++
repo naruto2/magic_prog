@@ -305,17 +305,17 @@ int init_suffix_map()
 Suffix::Encoding get_encoding(const string& s)
 		// try to deduce type from file name using a lookup table
 {
-  /*
   static int x = init_suffix_map();
+  x++;
+  /*  string::const_iterator p = myfind(s.begin(),s.end(),'.');
+  if (p==s.end()) return Suffix::none;	// no suffix
 
-	string::const_iterator p = find(s.begin(),s.end(),'.');
-	if (p==s.end()) return Suffix::none;	// no suffix
-
-	string suf(p+1,s.end());
-
-	return suffix_map[suf];
   */
-  return suffix_map[""];
+  string::const_iterator p = s.end();
+  for (;p!=s.begin();p--) if ( *p == '.' ) break;
+  string suf(p+1,s.end());
+  return suffix_map[suf];
+
 }
 
 bool can_open(const string& s)
@@ -341,6 +341,7 @@ Image::Image(Point xy, string s, Suffix::Encoding e)
 	}
 
 	if (e == Suffix::none) e = get_encoding(s);
+
 	
 	switch(e) {
 	case Suffix::jpg:
@@ -350,8 +351,8 @@ Image::Image(Point xy, string s, Suffix::Encoding e)
 		p = new Fl_GIF_Image(s.c_str());
 		break;
 //	case Suffix::bmp:
-//		p = new Fl_BMP_Image(s.c_str());
-//		break;
+//              p = new Fl_BMP_Image(s.c_str());
+//              break;
 	default:	// Unsupported image encoding
 		fn.set_label("unsupported file type \""+s+'\"');
 		p = new Bad_image(30,20);	// the "error image"

@@ -21,6 +21,23 @@ int main()
   win.attach(sine);
 
   
+  Rectangle r {Point{200,200},100,50};
+  r.set_fill_color(Color::yellow);
+  win.attach(r);
+
+
+  Closed_polyline poly_rect;
+
+  poly_rect.add(Point{100,50});
+  poly_rect.add(Point{200,50});
+  poly_rect.add(Point{200,100});
+  poly_rect.add(Point{100,100});
+  poly_rect.add(Point{50,75});
+  poly_rect.set_style(Line_style(Line_style::dash,2));
+  poly_rect.set_fill_color(Color::green);
+  win.attach(poly_rect);
+
+  
   Polygon poly;
 
 
@@ -29,9 +46,19 @@ int main()
   poly.add(Point{400,200});
 
   poly.set_color(Color::red);
-
+  poly.set_style(Line_style(Line_style::dash,4));
   win.attach(poly);
 
+  Text t {Point{150,150},"Hello, graphical world!"};
+  t.set_font(Graph_lib::Font::times_bold);
+  t.set_font_size(20);
+  win.attach(t);
+  
+
+  Image ii {Point{100,50},"image.jpg"};
+  win.attach(ii);
+
+  
   win.wait_for_button();
   return 1;
 }
