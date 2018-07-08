@@ -39,8 +39,9 @@ struct Color {
 	char visibility() const { return v; }
 	void set_visibility(Transparency vv) { v=vv; }
 private:
-	unsigned char v;	// 0 or 1 for now
-	Fl_Color c;
+  Fl_Color c;
+  unsigned char v;	// 0 or 1 for now
+
 };
 
 struct Line_style {
@@ -163,7 +164,7 @@ public:
 	Shape& operator=(const Shape&) = delete;
 private:
 	vector<Point> points;	// not used by all shapes
-	Color lcolor {fl_color()};
+	Color lcolor {static_cast<int>(fl_color())};
 	Line_style ls {0};
 	Color fcolor {Color::invisible};
 
@@ -212,8 +213,8 @@ struct Rectangle : Shape {
 	int height() const { return h; }
 	int width() const { return w; }
 private:
-	int h;			// height
 	int w;			// width
+	int h;			// height
 //	Color fcolor;	// fill color; 0 means "no fill"
 };
 

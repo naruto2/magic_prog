@@ -20,9 +20,10 @@ struct Simple_window : Graph_lib::Window {
 		while (!button_pushed) Fl::wait();
 		button_pushed = false;
 		Fl::redraw();
+		return true;
 	}
 
-	Button next_button;
+
 private:
 	bool button_pushed;
 	
@@ -34,4 +35,6 @@ private:
 
 	void next() { button_pushed = true; }
 
+ public:
+	Button next_button;
 };

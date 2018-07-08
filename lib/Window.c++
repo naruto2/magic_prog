@@ -56,7 +56,7 @@ void Window::detach(Shape& s)
 
 
 void Window::put_on_top(Shape& p) {
-	for (int i=0; i<shapes.size(); ++i) {
+	for (unsigned int i=0; i<shapes.size(); ++i) {
 		if (&p==shapes[i]) {
 			for (++i; i<shapes.size(); ++i)
 				shapes[i-1] = shapes[i];
