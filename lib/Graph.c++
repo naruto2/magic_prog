@@ -1,5 +1,6 @@
 #include "Graph.h"
 #include<map>
+#include <fstream>
 
 namespace Graph_lib {
 
@@ -318,13 +319,10 @@ Suffix::Encoding get_encoding(const string& s)
 
 }
 
-bool can_open(const string& s)
-            // check if a file named s exists and can be opened for reading
-{
-  return true;
-  //ifstream ff(s.c_str());
-  //return ff;
-}
+
+
+bool can_open(const string& s);
+
 
 
 // somewhat overelaborate constructor
@@ -369,4 +367,19 @@ void Image::draw_lines() const
 		p->draw(point(0).x,point(0).y);
 }
 
+
+
+
+using namespace std;
+
+bool can_open(const string& s)
+            // check if a file named s exists and can be opened for reading
+{
+  ifstream ff(s.c_str());
+  return (bool)ff;
+}
+
+
 } // Graph
+
+

@@ -373,7 +373,12 @@ struct Image : Shape {
 	~Image() { delete p; }
 	void draw_lines() const;
 	void set_mask(Point xy, int ww, int hh) { w=ww; h=hh; cx=xy.x; cy=xy.y; }
-	void move(int dx,int dy) { Shape::move(dx,dy); p->draw(point(0).x,point(0).y); }
+	void move(int dx,int dy) {
+	  Shape::move(dx,dy);
+	  //tsukud-y cout <<"debug:"<< point(0).x << point(0).y << endl;
+	  // cout <<"degug:"<<p<<endl;
+	  // p->draw(point(0).x,point(0).y);
+	}
 private:
 	int w,h,cx,cy; // define "masking box" within image relative to position (cx,cy)
 	Fl_Image* p;

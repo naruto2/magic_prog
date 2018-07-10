@@ -57,8 +57,11 @@ int main()
 
   Image ii {Point{200,250},"image.jpg"};
 
+  ii.move(50,50);  
   win.attach(ii);
 
+
+  
   Circle c {Point{100,200},50};
   Ellipse e {Point{100,200},75,25};
   e.set_color(Color::dark_red);
