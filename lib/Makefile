@@ -3,7 +3,7 @@ SRCS = je.c++  jukebox.c++  lang.c++  stop_watch.c++  usdjpy.c++  zeller.c++ Pum
 #for GNU make
 #SRCS = $(shell find . -name '*.c')
 OBJS = $(SRCS:.c++=.o)
-CPPFLAGS = -I../include -Wall -g 
+CPPFLAGS = -I../include -Wall -g
 
 AR  := /bin/ar
 CPP := c++
@@ -17,7 +17,7 @@ all: $(LIBNAME)
 $(LIBNAME): $(OBJS)
 	$(AR) cr $(LIBNAME) $(OBJS)
 .c++.o:
-	$(CPP) $(CPPFLAGS)  -c $< -o $@
+	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
 	$(RM) -f $(OBJS) $(LIBNAME)
