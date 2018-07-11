@@ -9,6 +9,12 @@ all: ;
 	$(CPP)  English.d/main_hello.c++ -o bin/hello $(CPPFLAGS)
 	$(CPP)  Musics.d/main_jbox.c++ -o bin/jbox $(CPPFLAGS)
 	$(CPP)  Musics.d/main_musiclist.c++ -o bin/musiclist $(CPPFLAGS)
+	$(CPP)  Musics.d/main_70s.c++ -o bin/70s $(CPPFLAGS)
+	$(CPP)  Musics.d/main_80s.c++ -o bin/80s $(CPPFLAGS)
+	$(CPP)  Musics.d/main_Komuro.c++ -o bin/Komuro $(CPPFLAGS)
+	$(CPP)  Musics.d/main_Bach.c++ -o bin/Bach $(CPPFLAGS)
+	$(CPP)  Musics.d/main_Beethoven.c++ -o bin/Beethoven $(CPPFLAGS)
+	$(CPP)  Musics.d/main_Chopin.c++ -o bin/Chopin $(CPPFLAGS)
 	$(CPP)  Physiedu.d/main_stopwatch.c++ -o bin/stopwatch $(CPPFLAGS)
 	$(CPP)  Socialstudies.d/main_usdjpy.c++ -o bin/usdjpy $(CPPFLAGS)
 
