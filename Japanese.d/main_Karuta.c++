@@ -1,7 +1,7 @@
 #include "../include/magic_prog.h"
 
 
-void shuffle(vector<unsigned int> &w)
+void shuffle(vector<string> &w)
 {
   srand((unsigned int)time(NULL));
   for(unsigned int i = 0; i<32*w.size(); i++)
@@ -72,12 +72,14 @@ int main()
       "あ","さ","き","ゆ","め","み","し",
       "ゑ","ひ","も","せ","す","京"};
 
-  vector<unsigned int> w;
-  for (unsigned int i=0; i<v.size(); i++) w.push_back(i);
-  shuffle(w);
+  shuffle(v);
   
+  for (unsigned int i=0; i<v.size(); i++)
+    cout << v[i] << " ";
+  cout << endl;
+
   for (unsigned int i=0; i<v.size(); i++) {
-    Pumplupinpull("話して",Karuta[v[w[i]]]);
+    Pumplupinpull("話して",Karuta[v[i]]);
     string str;
     getline(cin,str);
   }

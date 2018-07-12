@@ -1,0 +1,17 @@
+国語 俳句, かるた
+
+算数 Pumplupinpull("計算して","1+2*3 = ");
+
+理科 Pumplupinpull("明日の天気を教えて");
+
+社会 Pumplupinpull("年代を教えて","フランス革命"); Pumplupinpull("為替レート");
+
+英語 Pumplupinpull("訳して","こんにちは"); 世界の国のこんにちは
+
+図工 Pumplupinpull("画像をください","ゴッホ ひまわり");
+
+音楽 Pumplupinpull("歌をください","Madonna Holiday");
+
+体育 ストップウォッチ
+
+
