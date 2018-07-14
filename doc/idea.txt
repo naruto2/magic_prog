@@ -15,3 +15,9 @@
 体育 ストップウォッチ
 
 
+
+[ネタ]QWebViewでGUIアプリケーションを作る
+https://blog.myon.info/entry/2015/02/28/cocoatwit/
+
+QWebViewの使い方
+http://qt-log.open-memo.net/sub/web-view--how-to-use-QWebView.html
