@@ -13,6 +13,9 @@
 #include <webkit2/webkit2.h>
 #include <JavaScriptCore/JavaScript.h>
 
+#define __NAME__ "a.out"
+#define __NAME_UPPERCASE__ "A.OUT"
+#define __NAME_CAITALIZED__ "A.out"
 
 static void client_destroy(GtkWidget *, gpointer);
 static gboolean client_destroy_request(WebKitWebView *, gpointer);
