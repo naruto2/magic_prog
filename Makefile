@@ -21,3 +21,10 @@ all: ;
 
 clean: ;
 	rm -f bin/*
+
+allclean: ;
+	rm -rf bin/* lib/*.o */a.exe lib/libmagic.a
+
+install: ;
+	cp lib/libmagic.a /usr/lib
+	cp include/magic_prog.h /usr/include
