@@ -23,7 +23,7 @@ clean: ;
 	rm -f bin/*
 
 allclean: ;
-	rm -rf bin/* lib/*.o */a.exe lib/libmagic.a
+	rm -f bin/* lib/*.o */a.exe lib/libmagic.a
 
 install: ;
 	cp lib/libmagic.a /usr/lib
