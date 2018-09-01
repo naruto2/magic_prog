@@ -1,13 +1,13 @@
-#include "../include/magic_prog.h"
+#include <magic_prog.h>
 
 int main()
 {
-  Pumplupinpull("言語設定","英語");
+  setlang("英語");
   for(string j;;) {
     cin >> j;
     if ( !cin ) break;
-    cout << Pumplupinpull("翻訳して",j);
-    Pumplupinpull("話して",j);
+    cout << je(j);
+    pron(j);
   }
   return 0;
 }
